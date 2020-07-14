@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import './statstwo.dart';
@@ -8,8 +7,8 @@ import 'package:http/http.dart' as http;
 import 'package:auto_size_text/auto_size_text.dart';
 
 void main() => runApp(new MaterialApp(
-  home: new StatPage(),
-));
+      home: new StatPage(),
+    ));
 
 class StatPage extends StatefulWidget {
   @override
@@ -49,17 +48,13 @@ class HomePageState extends State<StatPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              new Text("India      Total  Active  Recovered  Death", style: TextStyle(color: Colors.black, fontSize: 15.0)),
-
-
+              new Text("India      Total  Active  Recovered  Death",
+                  style: TextStyle(color: Colors.black, fontSize: 15.0)),
             ],
           ),
-
         ),
-
       ),
-
-      body:Container(
+      body: Container(
         child: new ListView.builder(
             itemCount: data == null ? 0 : data.length - 1,
             itemBuilder: (BuildContext context, int index) {
@@ -81,16 +76,11 @@ class HomePageState extends State<StatPage> {
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) =>
                                   ScreenTwo(data[index]["state"]),
-
                             ));
                           },
-
-
                           child: Container(
-
                             child: Column(
                               children: <Widget>[
-
                                 Padding(
                                   padding: const EdgeInsets.only(right: 1.0),
                                   child: new AutoSizeText(

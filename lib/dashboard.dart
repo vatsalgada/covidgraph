@@ -4,6 +4,7 @@ import 'package:maps2/stats.dart';
 import './heatmap.dart';
 import 'package:flutter/material.dart';
 import './dodonts.dart';
+import 'Screens/chat.dart';
 
 class Dash extends StatelessWidget {
   @override
@@ -118,9 +119,9 @@ class Simplegraph extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(top: 10.0, bottom: 5.0),
       child: Container(
-        decoration: BoxDecoration(color: Colors.white),
-        width: MediaQuery.of(context).size.width * 0.9,
-        height: MediaQuery.of(context).size.height * 0.185,
+          decoration: BoxDecoration(color: Colors.white),
+          width: MediaQuery.of(context).size.width * 0.9,
+          height: MediaQuery.of(context).size.height * 0.185,
 
 //        child: RaisedButton(
 ////          padding: EdgeInsets.all(0.0),
@@ -133,9 +134,7 @@ class Simplegraph extends StatelessWidget {
 ////              return StatPage();
 ////            }));
 ////          },
-          child: Graphone()
-
-      ),
+          child: Graphone()),
     );
   }
 }
@@ -179,10 +178,14 @@ class Asses extends StatelessWidget {
         height: MediaQuery.of(context).size.height * 0.15,
         child: RaisedButton(
           onPressed: () {
-            //link page here
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        MyHomePage(title: 'Self-Assessment')));
           },
           child: Text(
-            "Asses agian",
+            "Asses yourself",
             style: TextStyle(
               fontSize: 25.0,
             ),

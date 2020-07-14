@@ -63,8 +63,6 @@ class _ScreenTwoState extends State<ScreenTwo> {
 
                         Row(
                           children: [
-
-
                             Expanded(flex: 2,
                               child : Container(
                                   child: new Text(
@@ -117,8 +115,9 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                       color: Colors.black,
                                     ),
                                   ),
-
-                                  padding: const EdgeInsets.all(10.0)),),
+                                  padding: const EdgeInsets.all(10.0)
+                              ),
+                            ),
                           ],
                         ),
                   ],

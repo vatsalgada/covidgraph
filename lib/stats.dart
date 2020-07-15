@@ -43,22 +43,23 @@ class HomePageState extends State<StatPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.white70,
-        title: Padding(
-          padding: EdgeInsets.all(10.0),
-          child:Row(
-            children: <Widget>[
-              Text('Appbar')
-            ],
-          )
-        ),
+//        elevation: 0.0,
+//        backgroundColor: Colors.white70,
+//        title: Padding(
+//          padding: EdgeInsets.all(10.0),
+//          child:Row(
+//            children: <Widget>[
+//              Text('Appbar')
+//            ],
+//          )
+//        ),
+      title: Text('dsjfhkj'),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(25.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              new Text("India      Total  Active  Recovered  Death", style: TextStyle(color: Colors.black, fontSize: 15.0)),
+              new Text("India      Total   Active   Recovered   Death", style: TextStyle(color: Colors.black, fontSize: 15.0)),
 
 
             ],

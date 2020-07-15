@@ -22,6 +22,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
       home: Scaffold(
         appBar: AppBar(
           title: Text(widget.statevar),
+          backgroundColor: Colors.blue,
         ),
         body: Center(
 

@@ -59,7 +59,73 @@ class HomePageState extends State<StatPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              new Text("India      Total   Active   Recovered   Death", style: TextStyle(color: Colors.black, fontSize: 15.0)),
+//              new Text("India      Total   Active   Recovered   Death", style: TextStyle(color: Colors.black, fontSize: 15.0)),
+              Expanded(
+                flex: 3,
+                child: Container(
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(right: 0.0),
+                        child: new Text(
+                          'States',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ],
+
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                    child: new AutoSizeText(
+                      "Total",
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(10.0)),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                    child: new AutoSizeText(
+                      "Active",
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(10.0)),
+              ),
+              Expanded(
+                flex: 3,
+                child: Container(
+                    child: new AutoSizeText(
+                      "Recovered",
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                    padding: const EdgeInsets.fromLTRB(5.0, 6.0, 1.0, 7.0)
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                    child: new AutoSizeText(
+                      "Death",
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                    padding: const EdgeInsets.fromLTRB(1.0, 6.0, 1.0, 7.0)
+                ),
+              ),
 
 
             ],
@@ -85,15 +151,11 @@ class HomePageState extends State<StatPage> {
                     child: new Center(
                       child: FlatButton(
                         onPressed: (){
-//                      Navigator.of(context).push(MaterialPageRoute(
-//                          builder: (context) =>
-//                          ScreenTwo(data[index]["state"]),
-//                      ),
-//                      );
-                          Navigator.of(context, rootNavigator: true).push(
+                          if (ScreenTwo(data[index]['state']) != null)
+                            Navigator.of(context, rootNavigator: true).push(
                               new CupertinoPageRoute<bool>(
 //                          fullscreenDialog: true,
-                                builder: (BuildContext context) => ScreenTwo(data[index]["state"],
+                              builder: (BuildContext context) => ScreenTwo(data[index]["state"],
                                 ),
                               )
                           );

@@ -106,7 +106,9 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                     ),
                                   ),
 
-                                  padding: const EdgeInsets.all(10.0)),),
+                                  padding: const EdgeInsets.all(10.0)
+                              ),
+                            ),
                             Expanded(flex: 1,
                               child :  Container(
                                   child: new Text(

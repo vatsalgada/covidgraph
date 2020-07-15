@@ -46,16 +46,23 @@ class HomePageState extends State<StatPage> {
         elevation: 0.0,
         backgroundColor: Colors.white70,
         title: Padding(
-          padding: const EdgeInsets.all(2.0),
+          padding: EdgeInsets.all(10.0),
+          child:Row(
+            children: <Widget>[
+              Text('Appbar')
+            ],
+          )
+        ),
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(25.0),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               new Text("India      Total  Active  Recovered  Death", style: TextStyle(color: Colors.black, fontSize: 15.0)),
 
 
             ],
           ),
-
         ),
 
       ),
@@ -94,7 +101,7 @@ class HomePageState extends State<StatPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Expanded(
-                              flex: 2,
+                              flex: 3,
                               child: Container(
 
                                 child: Column(
@@ -117,7 +124,7 @@ class HomePageState extends State<StatPage> {
                               ),
                             ),
                             Expanded(
-                              flex: 1,
+                              flex: 2,
                               child: Container(
                                   child: new AutoSizeText(
                                     "+$a\n$a1",
@@ -129,7 +136,7 @@ class HomePageState extends State<StatPage> {
                                   padding: const EdgeInsets.all(10.0)),
                             ),
                             Expanded(
-                              flex: 1,
+                              flex: 2,
                               child: Container(
                                   child: new AutoSizeText(
                                     data[index]["active"],
@@ -141,7 +148,7 @@ class HomePageState extends State<StatPage> {
                                   padding: const EdgeInsets.all(10.0)),
                             ),
                             Expanded(
-                              flex: 1,
+                              flex: 2,
                               child: Container(
                                   child: new AutoSizeText(
                                     "+$c\n$c1",
@@ -153,7 +160,7 @@ class HomePageState extends State<StatPage> {
                                   padding: const EdgeInsets.all(10.0)),
                             ),
                             Expanded(
-                              flex: 1,
+                              flex: 2,
                               child: Container(
                                   child: new AutoSizeText(
                                     "+$d\n$d1",
@@ -164,13 +171,13 @@ class HomePageState extends State<StatPage> {
                                   ),
                                   padding: const EdgeInsets.all(10.0)),
                             ),
-                            Expanded(
-                              flex: 1,
-                              child: Container(
-                                  child: Icon(Icons.keyboard_arrow_right),
-                                  padding: const EdgeInsets.all(10.0)
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                    child: Icon(Icons.keyboard_arrow_right),
+                                    padding: const EdgeInsets.all(10.0)
+                                ),
                               ),
-                            ),
                           ],
                         ),
                       ),

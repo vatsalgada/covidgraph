@@ -122,18 +122,6 @@ class Simplegraph extends StatelessWidget {
           decoration: BoxDecoration(color: Colors.white),
           width: MediaQuery.of(context).size.width * 0.9,
           height: MediaQuery.of(context).size.height * 0.185,
-
-//        child: RaisedButton(
-////          padding: EdgeInsets.all(0.0),
-////          elevation: 5.0,
-////          shape: RoundedRectangleBorder(
-////            borderRadius: new BorderRadius.circular(10.0)
-////          ),
-////          onPressed: () {
-////            Navigator.push(context, MaterialPageRoute(builder: (context) {
-////              return StatPage();
-////            }));
-////          },
           child: Graphone()),
     );
   }
